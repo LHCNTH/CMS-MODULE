@@ -53,39 +53,19 @@
             height: 50px;
             background-color: red;
             border-radius: 50%;
-            border: 5px solid orange; /* Viền màu cam */
-            box-shadow: 0 0 15px orange; /* Hiệu ứng nhấp nháy */
+            border: 6px solid orange; /* Viền màu cam */
+            box-shadow: 0 0 20px orange; /* Hiệu ứng nhấp nháy */
             animation: blink 1s infinite; /* Hiệu ứng nhấp nháy */
         }
 
-        .flower::before, .flower::after {
-            content: "";
-            position: absolute;
-            width: 7px;
-            height: 7px;
-            background-color: red;
-            border-radius: 50%;
-            box-shadow: 0 0 15px orange; /* Hiệu ứng nhấp nháy */
-        }
-
-        .flower::before {
-            top: 10px;
-            left: 15px;
-        }
-
-        .flower::after {
-            top: 10px;
-            left: 30px;
-        }
-
         .flower-left {
-            top: 20px;
-            left: 270px;
+            top: 20%;
+            left: 20%;
         }
 
         .flower-right {
-            top: 20px;
-            right: 270px;
+            top: 20%;
+            right: 20%;
         }
 
         @keyframes blink {
@@ -100,7 +80,7 @@
             height: 50px;
             background-color: rgb(240, 15, 52);
             transform: rotate(-45deg);
-            animation: moveHeart 5s infinite;
+            animation: moveHeart 3s infinite;
         }
 
         .heart::before, .heart::after {
@@ -123,40 +103,41 @@
         }
 
         .heart-1 {
-            left: 90px;
-            top: 30%;
+            left: 6%;
+            top: 25%;
             animation: moveHeart1 3s infinite;
         }
 
         .heart-2 {
-            left: 130px;
+            left: 11%;
             top: 50%;
             animation: moveHeart2 3s infinite;
         }
 
         .heart-3 {
-            left: 170px;
-            top: 70%;
+            left: 16%;
+            top: 75%;
             animation: moveHeart3 3s infinite;
         }
 
         .heart-4 {
-            right: 90px;
-            top: 30%;
+            right: 6%;
+            top: 25%;
             animation: moveHeart4 3s infinite;
         }
 
         .heart-5 {
-            right: 130px;
+            right: 11%;
             top: 50%;
             animation: moveHeart5 3s infinite;
         }
 
         .heart-6 {
-            right: 170px;
-            top: 70%;
+            right: 16%;
+            top: 75%;
             animation: moveHeart6 3s infinite;
         }
+
 
         @keyframes moveHeart1 {
             0% { transform: translateY(0) rotate(-45deg); }
