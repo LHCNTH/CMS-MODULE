@@ -1,26 +1,27 @@
- <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="vi">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Trang Web Cute Âm Nhạc và Sách</title>
+    <title>Page of Dĩm Quỳn</title>
     <style>
-         html, body {
-            height: 100%; /* Đảm bảo body có chiều cao đầy đủ */
+        html, body {
+            height: 100%;
             margin: 0;
         }
 
         body {
             font-family: 'Comic Sans MS', cursive, sans-serif;
-            background-color: #ffe6f2; /* Màu nền phụ trợ nếu hình ảnh không tải được */
+            background-color: #ffe6f2;
             color: #dba9c2;
             margin: 0;
             padding: 0;
             text-align: center;
-            background-image: url('https://i.pinimg.com/736x/e1/9a/d8/e19ad8535d9774eba4e4940db9b98e12.jpg'); /* URL hình ảnh trực tiếp */
+            background-image: url('https://i.pinimg.com/564x/d5/05/53/d505533e27016c33c2de7ddce829a23a.jpg');
             background-repeat: no-repeat;
-            background-size: auto; /* Sử dụng kích thước gốc của hình ảnh */
-            background-position: center center; /* Căn chỉnh hình ảnh ở giữa */
+            background-size: auto;
+            background-position: center center;
+            position: relative;
         }
 
         header {
@@ -37,12 +38,162 @@
             text-shadow: 2px 2px 4px #f396c5;
         }
 
-        h2{
+        h2 {
             color: rgb(158, 17, 52); 
         }
-        h3{
-            color: rgb(204, 146, 146);
+
+        h3 {
+            color: rgb(226, 98, 98);
         }
+
+
+        .flower {
+            position: absolute;
+            width: 50px;
+            height: 50px;
+            background-color: red;
+            border-radius: 50%;
+            border: 5px solid orange; /* Viền màu cam */
+            box-shadow: 0 0 15px orange; /* Hiệu ứng nhấp nháy */
+            animation: blink 1s infinite; /* Hiệu ứng nhấp nháy */
+        }
+
+        .flower::before, .flower::after {
+            content: "";
+            position: absolute;
+            width: 7px;
+            height: 7px;
+            background-color: red;
+            border-radius: 50%;
+            box-shadow: 0 0 15px orange; /* Hiệu ứng nhấp nháy */
+        }
+
+        .flower::before {
+            top: 10px;
+            left: 15px;
+        }
+
+        .flower::after {
+            top: 10px;
+            left: 30px;
+        }
+
+        .flower-left {
+            top: 20px;
+            left: 270px;
+        }
+
+        .flower-right {
+            top: 20px;
+            right: 270px;
+        }
+
+        @keyframes blink {
+            0% { box-shadow: 0 0 15px orange; }
+            50% { box-shadow: 0 0 25px orange; }
+            100% { box-shadow: 0 0 15px orange; }
+        }
+
+        .heart {
+            position: absolute;
+            width: 50px;
+            height: 50px;
+            background-color: rgb(240, 15, 52);
+            transform: rotate(-45deg);
+            animation: moveHeart 5s infinite;
+        }
+
+        .heart::before, .heart::after {
+            content: "";
+            position: absolute;
+            width: 50px;
+            height: 50px;
+            background-color: rgb(240, 15, 52);
+            border-radius: 50%;
+        }
+
+        .heart::before {
+            top: -25px;
+            left: 0;
+        }
+
+        .heart::after {
+            top: 0;
+            left: 25px;
+        }
+
+        .heart-1 {
+            left: 90px;
+            top: 30%;
+            animation: moveHeart1 3s infinite;
+        }
+
+        .heart-2 {
+            left: 130px;
+            top: 50%;
+            animation: moveHeart2 3s infinite;
+        }
+
+        .heart-3 {
+            left: 170px;
+            top: 70%;
+            animation: moveHeart3 3s infinite;
+        }
+
+        .heart-4 {
+            right: 90px;
+            top: 30%;
+            animation: moveHeart4 3s infinite;
+        }
+
+        .heart-5 {
+            right: 130px;
+            top: 50%;
+            animation: moveHeart5 3s infinite;
+        }
+
+        .heart-6 {
+            right: 170px;
+            top: 70%;
+            animation: moveHeart6 3s infinite;
+        }
+
+        @keyframes moveHeart1 {
+            0% { transform: translateY(0) rotate(-45deg); }
+            50% { transform: translateY(-20px) rotate(-45deg); }
+            100% { transform: translateY(0) rotate(-45deg); }
+        }
+
+        @keyframes moveHeart2 {
+            0% { transform: translateY(0) rotate(-45deg); }
+            50% { transform: translateY(-15px) rotate(-45deg); }
+            100% { transform: translateY(0) rotate(-45deg); }
+        }
+
+        @keyframes moveHeart3 {
+            0% { transform: translateY(0) rotate(-45deg); }
+            50% { transform: translateY(-10px) rotate(-45deg); }
+            100% { transform: translateY(0) rotate(-45deg); }
+        }
+
+        @keyframes moveHeart4 {
+            0% { transform: translateY(0) rotate(-45deg); }
+            50% { transform: translateY(-20px) rotate(-45deg); }
+            100% { transform: translateY(0) rotate(-45deg); }
+        }
+
+        @keyframes moveHeart5 {
+            0% { transform: translateY(0) rotate(-45deg); }
+            50% { transform: translateY(-15px) rotate(-45deg); }
+            100% { transform: translateY(0) rotate(-45deg); }
+        }
+
+        @keyframes moveHeart6 {
+            0% { transform: translateY(0) rotate(-45deg); }
+            50% { transform: translateY(-20px) rotate(-45deg); }
+            100% { transform: translateY(0) rotate(-45deg); }
+        }
+
         .container {
             margin: 20px auto;
             padding: 20px;
@@ -56,11 +207,8 @@
         .button-container {
             display: flex;
             justify-content: space-between;
-            position: fixed;
             width: calc(100% - 100px);
-            top: 150px;
-            left: 30px;
-            right: 30px;
+            margin: 20px auto;
             box-sizing: border-box;
         }
 
@@ -81,12 +229,12 @@
 
         .music-links, .book-links {
             margin-top: 30px;
-            display: none; /* Ẩn liên kết nhạc và sách ban đầu */
+            display: none;
         }
 
         .music-links a, .book-links a {
             display: block;
-            color: #ff66b2;
+            color: #f01583;
             font-size: 1.2em;
             margin: 10px 0;
             text-decoration: none;
@@ -96,19 +244,9 @@
             text-decoration: underline;
         }
 
-        .animated-flower {
-            position: absolute;
-            top: 10px;
-            right: 10px;
-            width: 100px;
-            height: 100px;
-            background-image: url('https://example.com/flower_animation.gif');
-            background-size: cover;
-        }
-
         footer {
             background-color: #ff99cc;
-            padding: 10px;
+            padding: 5px;
             position: fixed;
             width: 100%;
             bottom: 0;
@@ -120,66 +258,28 @@
             color: white;
             font-size: 1em;
         }
-        p{
+
+        p {
             color: rgb(240, 15, 52); 
-            font-size: 1em; 
+            font-size: 2em; 
         }
 
-        @media (max-width: 600px) {
-            .button-container {
-                flex-direction: column;
-                width: auto;
-                top: 10px;
-                left: 10px;
-                right: 10px;
-            }
-
-            .button {
-                margin-bottom: 10px;
-                width: 100%;
-            }
-
-            .container {
-                margin: 10px;
-                padding: 10px;
-            }
-
-            .button-container, .music-links, .book-links {
-                width: 100%;
-                text-align: center;
-            }
-
-            header h1 {
-                font-size: 2em;
-            }
-
-            .animated-flower {
-                width: 80px;
-                height: 80px;
-                top: 5px;
-                right: 5px;
-            }
-        }
     </style>
-    <script>
-        function toggleLinks(className) {
-            var links = document.querySelector(`.${className}`);
-            if (links.style.display === 'none' || links.style.display === '') {
-                links.style.display = 'block'; // Hiện liên kết
-            } else {
-                links.style.display = 'none'; // Ẩn liên kết
-            }
-        }
-    </script>
-    
 </head>
 <body>
     <header>
-        <h1>Dĩm Quỳn <3 </h1>
-        <div class="animated-flower"></div>
+        <h1>Dĩm Quỳn 🤍</h1>
+        <div class="flower flower-left"></div>
+        <div class="flower flower-right"></div>
     </header>
+    <div class="heart heart-1"></div>
+    <div class="heart heart-2"></div>
+    <div class="heart heart-3"></div>
+    <div class="heart heart-4"></div>
+    <div class="heart heart-5"></div>
+    <div class="heart heart-6"></div>
     <div class="container">
-        <p>Up lên fb nhiều thì bị nói nên up đây nha 😏</p>
+        <p>Welcome to Diem Quynh's music and book list😌</p>
         
         <div class="button-container">
             <button class="button" onclick="toggleLinks('music-links')">YouTube</button>
@@ -210,8 +310,25 @@
         </div>
     </div>
     <footer>
-        <p>Yêu thương nhiều! 💖</p>
+        <p>Dĩm Quỳn 🤍</p>
     </footer>
+
+    <script>
+        function toggleLinks(className) {
+            var links = document.querySelector(`.${className}`);
+            var otherClassName = className === 'music-links' ? 'book-links' : 'music-links';
+            var otherLinks = document.querySelector(`.${otherClassName}`);
+    
+            if (links.style.display === 'none' || links.style.display === '') {
+                links.style.display = 'block';
+            } else {
+                links.style.display = 'none';
+            }
+    
+            if (otherLinks.style.display === 'block') {
+                otherLinks.style.display = 'none';
+            }
+        }
+    </script>
 </body>
 </html>
-
