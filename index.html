@@ -10,6 +10,29 @@
             margin: 0;
         }
 
+        html {
+            font-size: 1.5vw;
+        }
+
+        .card {
+            position: relative;
+            width: 100%;
+            background: #ddd;
+            padding: 10px;
+            border-radius: 10px;
+            font-size: 20px;
+            text-align: center;
+            margin-top: 20px;
+        }
+    
+        #heart {
+            position: fixed; /* Thay đổi từ absolute sang fixed */
+            top: 50px;
+            right: 50px;
+            font-size: 50px;
+            transition: transform 0.1s ease-out; /* Chuyển động mượt mà */
+        }
+
         body {
             font-family: 'Comic Sans MS', cursive, sans-serif;
             background-color: #ffe6f2;
@@ -19,52 +42,58 @@
             text-align: center;
             background-image: url('https://i.pinimg.com/564x/d5/05/53/d505533e27016c33c2de7ddce829a23a.jpg');
             background-repeat: no-repeat;
-            background-size: auto;
+            background-size: 35ic;
             background-position: center center;
             position: relative;
         }
 
         header {
             background-color: #ff99cc;
-            padding: 20px;
-            border-bottom: 5px solid #ff66b2;
+            padding: 1vw;
+            border-bottom: 0.5vw solid #ff66b2;
             position: relative;
         }
 
         header h1 {
             margin: 0;
-            font-size: 2.5em;
+            font-size: 3vw;
             color: white;
-            text-shadow: 2px 2px 4px #f396c5;
+            text-shadow: 0.2vw 0.2vw 0.4vw #f396c5;
         }
 
         h2 {
+            font-size: 1.5vw;
             color: rgb(158, 17, 52); 
         }
 
         h3 {
+            font-size: 1.2vw;
             color: rgb(226, 98, 98);
         }
 
+        p {
+            font-size: 2vw;
+            color: rgb(240, 15, 52); 
+        }
 
         .flower {
             position: absolute;
-            width: 50px;
-            height: 50px;
+            width: 3vw;
+            height: 3vw;
             background-color: red;
             border-radius: 50%;
-            border: 6px solid orange; /* Viền màu cam */
-            box-shadow: 0 0 20px orange; /* Hiệu ứng nhấp nháy */
-            animation: blink 1s infinite; /* Hiệu ứng nhấp nháy */
+            border: 1vw solid orange;
+            box-shadow: 0 0 2vw orange;
+            animation: blink 1s infinite;
         }
 
         .flower-left {
-            top: 20%;
+            top: 10%;
             left: 20%;
         }
-
+        
         .flower-right {
-            top: 20%;
+            top: 10%;
             right: 20%;
         }
 
@@ -76,9 +105,9 @@
 
         .heart {
             position: absolute;
-            width: 50px;
-            height: 50px;
-            background-color: rgb(240, 15, 52);
+            width: 3vw;
+            height: 3vw;
+            background-color: #ff66b2;
             transform: rotate(-45deg);
             animation: moveHeart 3s infinite;
         }
@@ -86,20 +115,20 @@
         .heart::before, .heart::after {
             content: "";
             position: absolute;
-            width: 50px;
-            height: 50px;
-            background-color: rgb(240, 15, 52);
+            width: 3vw;
+            height: 3vw;
+            background-color: #ff66b2;
             border-radius: 50%;
         }
 
         .heart::before {
-            top: -25px;
+            top: -1.5vw;
             left: 0;
         }
 
         .heart::after {
             top: 0;
-            left: 25px;
+            left: 1.5vw;
         }
 
         .heart-1 {
@@ -178,28 +207,27 @@
         .container {
             margin: 20px auto;
             padding: 20px;
-            max-width: 800px;
+            max-width: 50vw;
             background-color: rgba(255, 255, 255, 0.8);
             border-radius: 15px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            box-shadow: 0 0.4vw 0.8vw rgba(0, 0, 0, 0.2);
             position: relative;
         }
 
         .button-container {
             display: flex;
             justify-content: space-between;
-            width: calc(100% - 100px);
-            margin: 20px auto;
-            box-sizing: border-box;
+            width: 90%;
+            margin: 2vh auto;
         }
 
         .button {
             background-color: #ff66b2;
             color: white;
-            padding: 10px 20px;
+            padding: 0.6vw 1.2vw;
             border: none;
-            border-radius: 25px;
-            font-size: 1.2em;
+            border-radius: 1.8vw;
+            font-size: 1.5vw;
             cursor: pointer;
             transition: background-color 0.3s;
         }
@@ -216,7 +244,7 @@
         .music-links a, .book-links a {
             display: block;
             color: #f01583;
-            font-size: 1.2em;
+            font-size: 1.5vw;
             margin: 10px 0;
             text-decoration: none;
         }
@@ -240,11 +268,6 @@
             font-size: 1em;
         }
 
-        p {
-            color: rgb(240, 15, 52); 
-            font-size: 2em; 
-        }
-
     </style>
 </head>
 <body>
@@ -253,12 +276,14 @@
         <div class="flower flower-left"></div>
         <div class="flower flower-right"></div>
     </header>
+    
     <div class="heart heart-1"></div>
     <div class="heart heart-2"></div>
     <div class="heart heart-3"></div>
     <div class="heart heart-4"></div>
     <div class="heart heart-5"></div>
     <div class="heart heart-6"></div>
+
     <div class="container">
         <p>Welcome to Diem Quynh's music and book list😌</p>
         
@@ -274,11 +299,37 @@
             <a href="https://www.youtube.com/watch?v=gDicW64jvRQ&list=RDoh12JgVY2bk&index=5" target="_blank">Hãy Về Đây Bên Anh</a>
             <a href="https://www.youtube.com/watch?v=yEG3lPyqUVQ&list=RDoh12JgVY2bk&index=6" target="_blank">Chia Đôi Con Đường</a>
             <a href="https://www.youtube.com/watch?v=4zbAG8wPI8Q&list=RDoh12JgVY2bk&index=8" target="_blank">Vầng Trăng Khóc</a>
+            <a href="https://www.youtube.com/watch?v=URZ8pdDGucg&list=RDoh12JgVY2bk&index=4" target="_blank">Vì Anh Là Gió</a>
+            <a href="https://www.youtube.com/watch?v=javPANNdVvU&list=RDoh12JgVY2bk&index=2" target="_blank">Vừa Đi Vừa Khóc</a>
+            <a href="https://www.youtube.com/watch?v=gDicW64jvRQ&list=RDoh12JgVY2bk&index=5" target="_blank">Hãy Về Đây Bên Anh</a>
+            <a href="https://www.youtube.com/watch?v=yEG3lPyqUVQ&list=RDoh12JgVY2bk&index=6" target="_blank">Chia Đôi Con Đường</a>
+            <a href="https://www.youtube.com/watch?v=4zbAG8wPI8Q&list=RDoh12JgVY2bk&index=8" target="_blank">Vầng Trăng Khóc</a>
+            <a href="https://www.youtube.com/watch?v=URZ8pdDGucg&list=RDoh12JgVY2bk&index=4" target="_blank">Vì Anh Là Gió</a>
+            <a href="https://www.youtube.com/watch?v=javPANNdVvU&list=RDoh12JgVY2bk&index=2" target="_blank">Vừa Đi Vừa Khóc</a>
+            <a href="https://www.youtube.com/watch?v=gDicW64jvRQ&list=RDoh12JgVY2bk&index=5" target="_blank">Hãy Về Đây Bên Anh</a>
+            <a href="https://www.youtube.com/watch?v=yEG3lPyqUVQ&list=RDoh12JgVY2bk&index=6" target="_blank">Chia Đôi Con Đường</a>
+            <a href="https://www.youtube.com/watch?v=4zbAG8wPI8Q&list=RDoh12JgVY2bk&index=8" target="_blank">Vầng Trăng Khóc</a>
         </div>
 
         <div class="book-links">
             <h2>Một Vài Cuốn Sách Tui Đã Đọc Và Siêu Recommend</h2>
             <h3>Note: Tui đọc sách giấy nên gắn tạm link ebook nha ^^</h3>
+            <a href="https://www.dtv-ebook.com/doconline.php?hash=MTg5MjY=#epubcfi(/6/4[html47]!4/2/1:0)" target="_blank">Đại Dương Đen (Cuốn sách kể về câu chuyện của những người trầm cảm)</a>
+            <a href="https://www.dtv-ebook.com/ban-khong-thong-minh-lam-dau_15012.html#gsc.tab=0" target="_blank">Bạn Không Thông Minh Lắm Đâu (Như tên sách)</a>
+            <a href="https://www.dtv-ebook.com/ban-do-ngu-ngo-roi-day_15988.html#gsc.tab=0" target="_blank">Bạn Đỡ Ngu Ngơ Rồi Đấy (Như tên luôn)</a>
+            <a href="https://www.dtv-ebook.com/cay-cam-ngot-cua-toi_17010.html#gsc.tab=0" target="_blank">Cây Cam Ngọt Của Tôi (Mượn Lan Anh)</a>
+            <a href="https://www.dtv-ebook.com/vu-tru_17466.html#gsc.tab=0" target="_blank">Vũ Trụ</a>            
+            <a href="https://www.dtv-ebook.com/ebook-vu-tru-trong-vo-hat-de-stephen-hawking-full-prc-pdf-epub-sach-hay_1450.html#gsc.tab=0" target="_blank">Vũ Trụ Trong Vỏ Hạt Dẻ (Khó hiểu nhưng siêu hay)</a> 
+            <a href="https://www.dtv-ebook.com/ebook-luoc-su-thoi-gian-stephen-hawking-full-prc-pdf-epub-azw3-khoa-hoc_2999.html#gsc.tab=0" target="_blank">Lược Sử Thời Gian (Cùng tác giả với cuốn trên)</a> 
+            <a href="https://www.dtv-ebook.com/vat-ly-thien-van-cho-nguoi-voi-va_18349.html#gsc.tab=0" target="_blank">Vật Lý Thiên Văn Cho Người Vội Vã (Dễ hiểu mà đọc nhanh lắm)</a> 
+            <a href="https://www.dtv-ebook.com/doconline.php?hash=MTg5MjY=#epubcfi(/6/4[html47]!4/2/1:0)" target="_blank">Đại Dương Đen (Cuốn sách kể về câu chuyện của những người trầm cảm)</a>
+            <a href="https://www.dtv-ebook.com/ban-khong-thong-minh-lam-dau_15012.html#gsc.tab=0" target="_blank">Bạn Không Thông Minh Lắm Đâu (Như tên sách)</a>
+            <a href="https://www.dtv-ebook.com/ban-do-ngu-ngo-roi-day_15988.html#gsc.tab=0" target="_blank">Bạn Đỡ Ngu Ngơ Rồi Đấy (Như tên luôn)</a>
+            <a href="https://www.dtv-ebook.com/cay-cam-ngot-cua-toi_17010.html#gsc.tab=0" target="_blank">Cây Cam Ngọt Của Tôi (Mượn Lan Anh)</a>
+            <a href="https://www.dtv-ebook.com/vu-tru_17466.html#gsc.tab=0" target="_blank">Vũ Trụ</a>            
+            <a href="https://www.dtv-ebook.com/ebook-vu-tru-trong-vo-hat-de-stephen-hawking-full-prc-pdf-epub-sach-hay_1450.html#gsc.tab=0" target="_blank">Vũ Trụ Trong Vỏ Hạt Dẻ (Khó hiểu nhưng siêu hay)</a> 
+            <a href="https://www.dtv-ebook.com/ebook-luoc-su-thoi-gian-stephen-hawking-full-prc-pdf-epub-azw3-khoa-hoc_2999.html#gsc.tab=0" target="_blank">Lược Sử Thời Gian (Cùng tác giả với cuốn trên)</a> 
+            <a href="https://www.dtv-ebook.com/vat-ly-thien-van-cho-nguoi-voi-va_18349.html#gsc.tab=0" target="_blank">Vật Lý Thiên Văn Cho Người Vội Vã (Dễ hiểu mà đọc nhanh lắm)</a> 
             <a href="https://www.dtv-ebook.com/doconline.php?hash=MTg5MjY=#epubcfi(/6/4[html47]!4/2/1:0)" target="_blank">Đại Dương Đen (Cuốn sách kể về câu chuyện của những người trầm cảm)</a>
             <a href="https://www.dtv-ebook.com/ban-khong-thong-minh-lam-dau_15012.html#gsc.tab=0" target="_blank">Bạn Không Thông Minh Lắm Đâu (Như tên sách)</a>
             <a href="https://www.dtv-ebook.com/ban-do-ngu-ngo-roi-day_15988.html#gsc.tab=0" target="_blank">Bạn Đỡ Ngu Ngơ Rồi Đấy (Như tên luôn)</a>
